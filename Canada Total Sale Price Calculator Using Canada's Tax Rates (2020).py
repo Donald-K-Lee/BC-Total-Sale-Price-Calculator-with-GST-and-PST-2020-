@@ -1,17 +1,17 @@
 #Title: Calculates the total cost of an item using Canada's tax rates from 2020
-print("Use the number within the brackets when selecting your location, British Columbia[1], Alberta [2], Saskatchewan[3], "
+print("Use the number within the brackets when selecting your location, British Columbia[1], Alberta [2], Saskatchewan[3],\n "
       "Manitoba[4], Ontario[5], Quebec[6], New Brunswick[7], Nova Scotia[8], Prince Edward Island[9],"
-      " Newfoundland and Labrador[10], Yukon[11], Northwest Territories[12], Nunavut[13]")
-area= eval(input("Please select your location by typing the number inside the bracket:"))
+      " Newfoundland and Labrador[10], \nYukon[11], Northwest Territories[12], Nunavut[13]")
+area=eval(input("Please select your location by typing the number inside the bracket:"))
 if area== 1: #British Columbia
     print("The location you selected is British Columbia")
     GST = 0.05 #GST rate in 2020 = 5%
     PST = 0.07 #PST rate in 2020 = 7%
-    HST = 0 #This area has no HST
+    HST = 0   #This area has no HST
 elif area== 2: #Alberta
     print("The location you selected is Alberta")
     GST = 0.05  # GST rate in 2020 = 5%
-    PST = 0 # Alberta does not have PST
+    PST = 0 #Alberta does not have PST
     HST = 0  # This area has no HST
 elif area== 3: #Saskatchewan
     print("The location you selected is Saskatchewan")
@@ -71,8 +71,12 @@ elif area== 13: #Nunavut
 else:
     print("Please restart this program and select a valid country")
     exit()
-price = float(input("Enter the cost of this item without tax included:"))
-tax= (GST * price) + (PST * price) + (HST * price)
-total = price + tax
-#round() rounds the number
-print("The total cost of this item including tax is" + " $" + str(round(total,2))) #The ",2" at the end of "total", rounds the number to 2 decimal places
+price = float(input("Enter the cost of the item without tax and the \"$\" symbol included:"))
+if price<0:
+    print("Please restart this program and select a valid price")
+    exit()
+else:
+    tax= (GST * price) + (PST * price) + (HST * price)
+    total = price + tax
+    #round() rounds the number
+    print("The total cost of this item including tax is" + " $" + str(round(total,2))) #The ",2" at the end of "total", rounds the number to 2 decimal places
