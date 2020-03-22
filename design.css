@@ -1,0 +1,434 @@
+:root {
+	/*Variable for top: 465px;, for D, H, M and S*/
+	--format: 465px;
+	/*Variable for top: 370px;, for the timer*/
+	--timer: 360px;
+	/*Variable for top: 380px;, for DC, HC, and HC*/
+	--C: 370px;
+	/*Variable for the text Opening In*/
+	--OI: 260px;
+	/*Text Font*/
+	--Timer:65px;
+	--DHMS: 22px;
+	--DHMSC: 55px;
+	/*End of Text Font*/
+	--skilla: 70px;
+}
+/*Makes page 2times longer*/
+html {
+	height: 200%;
+}
+
+body {
+	/*background: #162129;*/
+	background: rgb(0,0,0);
+	background: linear-gradient(169deg, rgba(0,0,0,1) 0%, rgba(41,41,187,1) 100%);
+	margin: 0px;
+/*overflow-x:hidden; prevents a negative margin when using a negative number for right*/
+	overflow-x: hidden;
+	z-index:-9;
+	text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+}
+.ttri {
+	bottom:0%; /*Ensures that it doesn't go above the homepage*/
+	position: absolute;
+	border-left: 600px solid #162129;
+	border-right: 700px solid #162129;
+	border-top: 250px solid transparent;
+	border-bottom: 100px solid #162129;
+	width: 50%;
+	z-index: -10;
+}
+/*Language Hover Text*/
+.invistt {
+	visibility: hidden;
+	width: 140px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 40px;
+	/* Position the tooltip */
+	position: absolute;
+	top: 45%;
+	margin-left: -80px;
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.htmla{
+	position:absolute;
+	height:var(--skilla);
+	width:auto;
+	z-index: 20px;
+	top: 20%;
+	left: 0%;
+	animation: htmla 24s 999;
+}
+
+@keyframes htmla {
+	0% {top: 20%;}
+	25%{left: 55%;}
+	40%{top:70%; left: 30%}
+	50% {top: 40%; left: 80%;}
+	75% {top:80%; left: 95%;}
+	90%{top: 40%; left: 40%;}
+	100% { top: 20%; left:0%;}
+}
+.cssa{
+	position:absolute;
+	height:var(--skilla);
+	width:auto;
+	z-index: 20px;
+	top: 80%;
+	right:0%;
+	animation: cssa 24s 999;
+}
+
+@keyframes cssa {
+	0% {top: 80%;}
+	25%{right: 55%;}
+	40%{top:70%; right: 30%}
+	50% {top: 40%; right: 80%;}
+	75% {top:80%; right: 95%;}
+	90%{top: 40%; right: 40%;}
+	100% { top: 80%; right:0%;}
+}
+.pythona{
+	position:absolute;
+	height:var(--skilla);
+	width:auto;
+	z-index: 20px;
+	top: 60%;
+	animation: pythona 24s 999;
+	left:0%;
+}
+
+@keyframes pythona {
+	0% {top: 60%;}
+	25%{left: 35%;}
+	40%{top:70%; left: 20%}
+	50% {top: 40%; left: 90%;}
+	75% {top:20%; left: 95%;}
+	90%{top: 70%; left: 50%;}
+	100% { top: 60%; left:0%;}
+}
+.jsa{
+	position:absolute;
+	height:var(--skilla);
+	width:auto;
+	z-index: 20px;
+	top: 40%;
+	animation: jsa 24s 999;
+	right:0%;
+}
+
+@keyframes jsa {
+	0% {top: 40%;}
+	25%{right: 35%;}
+	40%{top:70%; right: 20%}
+	50% {top: 40%; right: 90%;}
+	75% {top:20%; right: 95%;}
+	90%{top: 70%; right: 50%;}
+	100% { top: 40%; right:0%;}
+}
+/*Shadow Background image*/
+.bg {
+	position: absolute;
+	z.index: -7;
+	/*Height must = to the height to the tint*/
+	height:auto;
+	width: 20%;
+	top: 32.5%;
+	left:15%;
+	/*1st number is the shadow on the right, 2nd number is the bottom shadow, and 3rd number is the opacity of the shadow*/
+	box-shadow: -80px 30px 10px rgba(0,0,0,.5);
+	animation: bg 3s;
+}
+@keyframes bg {
+	0% {left: -500%;}
+	25%{  left: -250%;}
+	100% {left:15%;}
+}
+	/*Timer with the element p*/
+p.t {
+	position: relative;
+	display:inline;
+	top: 185px;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	center: 50%;
+	left: 0%;
+	z-index: 5;
+}
+.intro{
+	position: absolute;
+	 font-family: 'Open Sans', sans-serif;
+	display:inline;
+	text-align: center;
+	font-size: 25px;
+	color: white;
+	left:19%;
+	z-index: 5;
+	animation: intro 8s 999;
+	text-shadow: -30px 15px 10px rgba(0,0,0,.5);
+	top: 729.5px; 
+}
+@keyframes intro {
+	0% {top: 10px; left: 0%;}
+	25%{top: 510px; left: 40%;}
+	50% {top: 650px; left: 85%;}
+	75% { top: 610px; left: 70%;}
+	90% { text-align:left;top: 729.5px; left:19%;}
+	100% { text-align:left;top: 729.5px; left:19%;}
+}
+.Oval {
+	position: absolute;
+	font-family: 'Open Sans', sans-serif;
+	top: 850px;
+	text-align: center;
+	font-size: 25px;
+	left: 35%;
+	z-index: 75;
+	color:#162129;
+	background-color:#162129;
+	width: 150px;
+	height: auto;
+	border-radius: 40px;
+	padding: 0px;
+	text-decoration: none;
+	animation: oval 8s 999;
+}
+.iwb {
+	visibility: hidden;
+	width: 170px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 40px;
+	/* Position the tooltip */
+	position: absolute;
+	top: -120%;
+	margin-left: -150px;
+	z-index: -10;
+	opacity: 1;
+}
+@keyframes oval {
+	0% {top: 30%; 	background-color:#162129;left: -10%;}
+	25%{top: 56%; 	background-color:#162129;left: 40%;}
+	50% {top: 10%; 	background-color:#162129;left: 90%;}
+	75% {top: 75%; 	background-color:#162129;left: 20%;}
+	90% {text-align: center; top: 850px; background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(22,33,41,1) 82%); left: 35%;}
+	100% {text-align: center; top: 850px; background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(22,33,41,1) 82%);left: 35%;}
+}
+.Oval:hover:after {
+	content:"";
+	background: url(Lightning1.jpg);
+	background-size:cover;
+	position: absolute;
+	center: 100%;
+	top:0;
+	left:0;
+	opacity: 0.6;
+	z-index: -99;
+	height: 100%;
+	width: 100%;
+	border-radius: 40px;
+}
+.logo {
+	position: absolute;
+	width: 350px; 
+	height: auto;
+	z-index:5px;
+	top: 230px;
+	left: 5%;
+	animation: logo 3s;
+}
+@keyframes logo {
+	0% {top: -1105px;}
+	100% {top: 230px;}
+}
+#Stand { /*Please stand by end text*/
+	position: absolute;
+	display:inline;
+	top: 420px;
+	right:26.5%;
+	font-size:  var(--DHMSC);
+	color: white;
+	z-index: 4;
+}
+#dot1 {
+	position: absolute;
+	display:inline;
+	top: 435px;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	center: 50%;
+	right: 25%;
+	z-index: 5;
+	animation: dot1 1.5s 999;
+}
+@keyframes dot1 {
+	0%{top: 435px;}
+	33%{top: 425px;}
+	99{top: 435px;}
+}
+#dot2 {
+	position: absolute;
+	display:inline;
+	top: 430px;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	center: 50%;
+	right: 24%;
+	z-index: 5;
+	animation: dot2 1.5s 999;
+}
+@keyframes dot2 {
+	33%{top: 435px;}
+	66%{top: 425px;}
+	99{	top: 430px;}
+}
+#dot3 {
+	position: absolute;
+	display:inline;
+	top: 425px;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	center: 50%;
+	right: 23%;
+	z-index: 5;
+	animation: dot3 1.5s 999;
+}
+@keyframes dot3 {
+	0%{top: 425px;}
+	33%{top: 435px;}
+	99{top: 425px;}
+}
+	/*"Opening In" text*/
+#OI {
+	position: absolute;
+	top: var(--OI);
+	text-align: center;
+	font-size: 65px;
+	color : white;
+	z-index: 5;
+	left:37.5%;
+}
+/*Timer for Days*/
+#DTimer {
+	position: absolute;
+	display:inline;
+	top: var(--timer);
+	right:285px;
+	font-size:  var(--Timer);
+	color: white;
+	z-index: 5;
+}
+/*Format for Days*/
+#D {
+	position: absolute;
+	display:inline;
+	top: var(--format);
+	right:285px;
+	font-size:  var(--DHMS);
+	color: white;
+	center: 50%;
+	z-index: 5;
+}
+/*Timer for Hours*/
+#HTimer {
+	position: absolute;
+	display:inline;
+	top: var(--timer);
+	right:100px;
+	font-size:  var(--Timer);
+	color: white;
+	z-index: 5;
+}
+/*Format for Hours*/
+#H {
+	position: absolute;
+	display:inline;
+	top: var(--format);
+	right:100px;
+	font-size:  var(--DHMS);
+	color: white;
+	center: 50%;
+	z-index: 5;
+}
+/*Timer for Minutes*/
+#MTimer {
+	position: absolute;
+	display:inline;
+	top: var(--timer);
+	right :-85px;
+	font-size:  var(--Timer);
+	color: white;
+	z-index: 5;
+}
+/*Format for Minutes*/
+#M {
+	position: absolute;
+	display:inline;
+	top: var(--format);
+	right :-85px;
+	font-size:  var(--DHMS);
+	color:white;
+	center: 50%;
+	z-index: 5;
+}
+/*Timer for Seconds*/
+#STimer {
+	position: absolute;
+	display:inline;
+	top: var(--timer);
+	right:-270px;
+	font-size:  var(--Timer);
+	color:white;
+	z-index: 5;
+}
+/*Format for Seconds*/
+#S {
+	position: absolute;
+	display:inline;
+	top: var(--format);
+	right:-270px;
+	font-size:  var(--DHMS);
+	color: white;
+	z-index: 5;
+}
+/*Start of the : between time*/
+#DC {
+	position: absolute;
+	display:inline;
+	top: var(--C);
+	right:185px;
+	font-size:  var(--DHMSC);
+	color: white;
+	z-index: 5;
+}
+#HC {
+	position: absolute;
+	display:inline;
+	top: var(--C);
+	right:10px;
+	font-size:  var(--DHMSC);
+	color: white;
+	z-index: 5;
+}
+#MC {
+	position: absolute;
+	display:inline;
+	top: var(--C);
+	right:-195px;
+	font-size:  var(--DHMSC);
+	color: white;
+	z-index: 5;
+}
+/*End*/

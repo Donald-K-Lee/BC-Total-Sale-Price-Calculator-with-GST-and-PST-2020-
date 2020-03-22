@@ -1,0 +1,109 @@
+:root {
+	--vamt:-370px; /*Bottom: About Me Text, paste this... var(--vamt);  */
+}
+/*About me heading*/
+h1.ab {
+	top:0%;
+	position:relative;
+	text-align: center;
+	font-size: 60px;
+	bottom: var(--vamt);
+	color: white;
+ font-family: 'Open Sans', sans-serif;
+}
+/*About me text*/
+p.amt {
+	position: relative;
+	color: white;
+	bottom: var(--vamt);
+	font-size: 30px;
+ font-family: 'Open Sans', sans-serif;
+	animation: amtslide 4s 1;
+	left: 50px;
+}
+/*Bottom rectangle*/
+.bsri {
+	top:200%; /*Ensures that it doesn't go above the homepage*/
+	position: absolute;
+	border-top: 0px solid #162129;
+	border-bottom: 5px solid #162129;
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
+	width: 100%;
+	z-index: 100;
+}
+/*triangle*/
+.btri {
+	top:100%; /*Ensures that it doesn't go above the homepage*/
+	position: absolute;
+	border-top: 469.5px solid #162129;
+	border-bottom: 469.5px solid #162129;
+	border-left: 0px solid transparent;
+	border-right: 120px solid transparent;
+	width: 51.5%;
+	z-index: -10;
+}
+.rbtri { /*right triangle*/
+	top:100%; /*Ensures that it doesn't go above the homepage*/
+	position: absolute;
+	border-top: 469.5px solid #162129;
+	border-bottom: 469.5px solid #162129;
+	border-left: 100px solid transparent;
+	border-right: 0px solid transparent;
+	width: 15%;
+	z-index: -10;
+	right:0%;
+}
+/*The left section of the about me page*/
+section.left {
+	position: absolute;
+	bottom: -100%;
+	border-top: 500px solid transparent;
+	border-bottom: 500px solid transparent;
+	border-left: 0px solid transparent;
+	border-right: 100px solid transparent;
+	width: 50%;
+	z-index: -10;
+}
+/*about me image*/
+.profile {
+	z-index: -99; /*z-index must be less than section.left's z-index by 1*/
+	position: absolute;
+	bottom: -50%;
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	object-position: 77.5% 100%; 	/*position with the x/y cordinates, 50% 50% is the default value*/
+}
+h2.HAI{ /*Hobbies and Interests*/
+	position:relative;
+	bottom: var(--vamt);
+	left: 20px;
+	font-size: 60px;
+	color:white;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+/*to scroll to the bottom of the page*/
+#bp {
+	position: absolute;
+	bottom: -200%;
+}
+.Hobbies {
+		position: relative;
+	color: white;
+	bottom: var(--vamt);
+	font-size: 30px;
+	 font-family: 'Open Sans', sans-serif;
+	animation: amtslide 4s 1;
+	left: 50px;
+	text-align:left;
+}
+/*Animation for About me start*/
+@keyframes amtslide {
+	0% {text-align:left; left:-1500px;}
+	25%{text-align:left; left:-1000px;}
+	50% {text-align:left; left:-500px;}
+	100% {bottom: var(--vamt); left: 50px;}
+}
+/*End*/
