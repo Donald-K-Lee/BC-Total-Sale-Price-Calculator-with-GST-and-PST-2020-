@@ -1,6 +1,6 @@
 Note: This is my first ever Python project. 
 This program calculates the total cost of an item using Canada's tax rates from 2020. 
-Note that this program was created in 2020, therefore the tax rates may differ from the current tax rates in Canada, resulting
+Also note that this program was created in 2020, therefore the tax rates may differ from the current tax rates in Canada, resulting
 in this calculator to be inaccurate. 
 
 When you run this program, it will allow you to decide which province or territory you are in.
